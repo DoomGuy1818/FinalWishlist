@@ -1,0 +1,13 @@
+.banner-two {
+  width: 845px;
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 30px 20px;
+  margin: 0 auto;
+}
+
+@media (max-width: 850px) {
+  .banner-two {
+    width: 100%;
+  }
+}

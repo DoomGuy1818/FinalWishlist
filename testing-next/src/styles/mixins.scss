@@ -1,0 +1,202 @@
+@import './variables.scss';
+
+@mixin title60 {
+    font-size: 60px;
+    font-weight: 600;
+    color: $absolute-white-color;
+    line-height: 120%;
+}
+
+@mixin blackBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #141414;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@mixin grayBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: $gray-btn-color;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@mixin purpleBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: $purple-btn-color;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+@mixin purpleBtn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: $purple-btn-color;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #262626;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@mixin h1-title {
+  color: $dark-grey;
+  font-family: $first-montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin back-button{
+  color: $font-soft-grey;
+  font-family: $first-montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@mixin span-text{
+  color : $dark-grey;
+  font-family: $first-montserrat;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+@mixin placeholder-text{
+  color: $font-soft-grey;
+  font-family: $first-montserrat;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+}
+
+@mixin input-box{
+  border: $white;
+  border-radius: 20px;
+  box-shadow: $shadow;
+  background: $white;
+  color: $dark-grey;
+  font-family: $first-montserrat;
+  font-size: 1em;
+  padding: 1em 1em;
+}
+
+@mixin create-button{
+  background-color: #BC13CB;
+  border: #BC13CB;
+  border-radius: 20px;
+}
+
+@mixin button-text {
+  color: $white;
+  font-family: $first-montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin wishlist-h2 {
+  color: $dark-grey;
+  font-family: $first-montserrat;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin register-card {
+  height: 789px;
+  width: 626px;
+  background: $white;
+}
+
+@mixin register-button {
+  height: 62px;
+  width: 490px;
+  background-color: #BC13CB;
+  border: none;
+  border-radius: 20px;
+  color: $white;
+  font-family: $first-montserrat;
+  margin-top: 86px;
+  margin-left: 62px;
+  font-size: 20px;
+}
+
+@mixin sellerButton {
+  align-items: center;
+  background-color: $accent-violet;
+  // margin-left: 7.2rem;
+  border: 0;
+  border-radius: 45px;
+  box-sizing: border-box;
+  color: $white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $first-montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 30px;
+  max-width: 80vw;
+  min-height: 5vh;
+  min-width: 1vw;
+  overflow: hidden;
+  padding: 1em 2em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+
+@mixin sidebarParent {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	padding: 4rem 0;
+}
+
+@mixin sidebarChild {
+        padding-left: 1.5rem;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	&:hover, &:active {
+		background-color: $white;
+	}
+}
+
+@mixin sidebarSection {
+	padding: 1.5rem 1rem;
+	color: $dark-grey;
+	font-family: $first-montserrat;
+	font-size: 20pt;
+	font-weight: 600;
+}

@@ -1,0 +1,93 @@
+/*
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.list{
+  position: relative;
+  margin-top: 16rem;
+  margin-left: 6rem;
+  list-style-type: none;
+
+  a{
+    text-decoration: none;
+    @include back-button;
+  }
+}
+
+.friend{
+  position: relative;
+  margin-top: 56px;
+}
+
+.gifts{
+  position: relative;
+  margin-top: 56px;
+}
+.settings{
+  position: relative;
+  margin-top: 56px;
+}
+
+.page{
+  a{
+    color: $accent-blue
+  }
+}
+
+*/
+@import "../styles/mixins";
+@import "../styles/variables";
+
+
+
+.list {
+  position: relative;
+  margin-top: 3.23vw; 
+  margin-left: 5.21vw; 
+  list-style-type: none;
+
+  a {
+    text-decoration: none;
+    @include back-button;
+  }
+}
+
+.friend {
+  position: relative;
+  margin-top: 1.3vw; 
+  @media (max-width: 425px){
+    margin-top: 0.5vw; 
+  }
+}
+
+.gifts {
+  position: relative;
+  margin-top: 1.3vw; 
+  @media (max-width: 425px){
+    margin-top: 0.5vw; 
+  }
+}
+
+.settings {
+  position: relative;
+  margin-top: 1.3vw; 
+  @media (max-width: 425px){
+    margin-top: 0.5vw; 
+  }
+}
+
+
+
+
+@media (max-width: 425px){
+  .Text{
+    font-size: 2vw;
+  }
+}
+@media (max-width: 800px) {
+  .Text{
+    font-size: 2vw;
+  }
+}
+
+

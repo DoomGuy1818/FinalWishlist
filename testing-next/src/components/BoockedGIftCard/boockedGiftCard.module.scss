@@ -1,0 +1,143 @@
+.allcard {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1.04vw; 
+    box-shadow: 0 0.1vw 0.2vw rgba(0, 0, 0, 0.1); 
+    padding: 1.04vw; 
+    margin: 0.52vw; 
+    width: 20vw;
+    @media (max-width: 800px) {
+      width: 32vw;
+    }
+    @media (max-width: 425px) {
+      width: 42vw;
+    }
+  }
+  
+  .card {
+    display: flex;
+  }
+  
+  .imageContainer {
+    position: relative;
+    width: 7.81vw; 
+    height: 7.81vw; 
+    overflow: hidden;
+    border-radius: 1.04vw; 
+    margin-bottom: 1.04vw; 
+    @media (max-width: 800px) {
+      width: 10.81vw; 
+      height: 10.81vw; 
+    }
+    @media (max-width: 425px) {
+      width: 13.81vw; 
+      height: 13.81vw; 
+    }
+  }
+  
+  .image {
+    border-radius: 1.04vw; 
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    flex-grow: 1;
+    margin-bottom: 1.04vw; 
+    padding-left: 1vw; 
+    @media (max-width: 800px) {
+      padding-left: 2.2vw; 
+    }
+    @media (max-width: 425px) {
+      padding-left: 3.2vw; 
+    }
+  }
+  
+  .title {
+    font-size: 1.04vw; 
+    font-weight: bold;
+    margin-bottom: 0.52vw; 
+    @media (max-width: 800px) {
+      font-size: 2vw; 
+    }
+    @media (max-width: 425px) {
+      font-size: 2.5vw; 
+    }
+  }
+  
+  .price {
+    font-size: 1.25vw; 
+    color: #6c63ff;
+    margin-bottom: 0.52vw; 
+    @media (max-width: 800px) {
+      font-size: 2vw; 
+    }
+    @media (max-width: 425px) {
+      font-size: 2.5vw; 
+    }
+  }
+  
+  .link {
+    color: #6c63ff;
+    text-decoration: none;
+    font-size: 0.83vw; 
+    margin-bottom: 1.04vw; 
+    @media (max-width: 800px) {
+      font-size: 1.5vw; 
+    }
+    @media (max-width: 425px) {
+      font-size: 2vw; 
+    }
+  }
+  
+  .button {
+    width: 10vw;
+    font-size: 1vw;
+    padding: 0.52vw 1.04vw; 
+    background-color: transparent;
+    color: #6c63ff;
+    border: 0.1vw solid #6c63ff; 
+    border-radius: 0.52vw; 
+    cursor: pointer;
+    @media (max-width: 800px) {
+      font-size: 1.2vw; 
+    }
+    @media (max-width: 425px) {
+      font-size: 1.6vw; 
+    }
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    font-size: 0.94vw; 
+    color: #000;
+    @media (max-width: 800px) {
+      font-size: 1.2vw; 
+    }
+    @media (max-width: 425px) {
+      font-size: 1.6vw; 
+    } 
+  }
+  
+  .wishlist {
+    font-size: 0.73vw; 
+    cursor: pointer;
+    @media (max-width: 800px) {
+      font-size: 1.2vw; 
+    }
+    @media (max-width: 425px) {
+      font-size: 1.6vw; 
+    } 
+  }

@@ -1,0 +1,61 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.landing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.landingContainer {
+  padding: 1rem 0.5rem;
+  flex-grow: 1;
+  background-image: url("/background.png");
+  max-width: 100%;
+  height: auto;
+}
+
+.foreground {
+  display: inline-flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.textContainer {
+  z-index: 10;
+  margin: 1.5rem;
+}
+
+.heading {
+  color: $white;
+  text-align: center;
+  font-family: $first-montserrat;
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: $shadow;
+}
+
+.subheading {
+  color: $white;
+  padding: 5% 10%;
+  display: flex;
+  text-shadow: $shadow;
+  justify-content: center;
+  font-family: $first-montserrat;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.fuckingButton {
+  align-self: center;
+}
+
+.landingButton {
+  @include sellerButton
+}

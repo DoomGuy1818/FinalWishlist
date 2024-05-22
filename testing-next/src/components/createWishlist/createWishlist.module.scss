@@ -1,0 +1,73 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.container{
+  // margin-top: 150px;
+  height: 100vh;
+  background-color: #E8EAFF;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-left: 55px;
+    @include span-text();
+  }
+
+  input {
+    margin-left: 55px;
+    margin-top: 20px;
+    width: 620px;
+    height: 40px;
+    @include input-box
+  }
+}
+
+.commentBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 78px;
+  span {
+    margin-left: 55px;
+    @include span-text();
+  }
+  input {
+    margin-left: 55px;
+    margin-top: 20px;
+    width: 620px;
+    height: 214px;
+    @include input-box
+  }
+}
+
+.createWishlist {
+  margin-left: 150px;
+  margin-top: 76px;
+  width: 730px;
+  height: 774px;
+  background-color: white;
+  border-radius: 20px;
+
+  a {
+    margin-top: 72px;
+    margin-left: 84px;
+    @include back-button
+  }
+
+  h1 {
+    margin-left: 52px;
+    @include h1-title;
+  }
+}
+
+.content {
+  margin-top: 70px;
+}
+

@@ -1,0 +1,32 @@
+.cards-shops__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 184px);
+  grid-gap: 22px;
+}
+.cards-shops__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8edff;
+  border-radius: 20px;
+}
+.cards-shops__image {
+  object-fit: contain;
+}
+
+@media (min-width: 427px) and (max-width: 767px) {
+  .cards-shops__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 184px);
+    grid-gap: 22px;
+  }
+}
+
+@media (max-width: 426px) {
+  .cards-shops__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 184px);
+    grid-gap: 15px;
+  }
+}

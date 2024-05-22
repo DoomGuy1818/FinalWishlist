@@ -1,0 +1,18 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.logo {
+	display: inline-flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.text {
+	font-family: $first-montserrat;
+	color: $dark-grey;
+	font-weight: 700;
+	font-size: 2rem;
+	margin-left: 0.5rem;
+}

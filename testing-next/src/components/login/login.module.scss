@@ -1,0 +1,110 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.container {
+  background-color: $background-white;
+  height: 100vh;
+  // width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border-radius: 2rem;
+  margin: auto;
+  @include register-card;
+  width: clamp(60vw, 80vw, 80vw);
+  height: fit-content;
+  box-shadow: $shadow;
+  button {
+    @include register-button;
+    width: clamp(40vw, 60vw, 80vw);
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  h1 {
+    margin-left: 2rem;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    @include h1-title;
+  }
+}
+
+.loginContent {
+  padding: 2rem 1rem 3rem 1rem;
+}
+
+.backButton {
+  @include back-button;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.loginInput {
+  display: flex;
+  flex-direction: column;
+  span {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    @include span-text;
+  }
+
+  input {
+    @include input-box;
+    width: clamp(40vw, 60vw, 80vw);
+    height: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.passwordInput {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    @include span-text;
+  }
+
+  input {
+    width: clamp(40vw, 60vw, 80vw);
+    height: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    @include input-box;
+  }
+}
+
+.support {
+  display: flex;
+  flex-direction: row;
+  @media only screen and (max-width: 650px) {
+	  flex-direction: column;
+  }
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.forgotPass {
+  @include span-text;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.register {
+  @include span-text;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}

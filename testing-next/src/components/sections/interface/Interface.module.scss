@@ -1,0 +1,125 @@
+.container {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 20px; 
+}
+
+.interface {
+  margin-bottom: 240px;
+
+  &Inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; // позволяет кнопкам переходить на новую строку при необходимости
+  }
+
+  &Link {
+    width: fit-content;
+    margin-bottom: 20px; // добавим отступ внизу для мобильных устройств
+  }
+
+  &Buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; // расстояние между кнопками
+  }
+
+  &Green,
+  &Red {
+    box-sizing: border-box;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    border-radius: 100px;
+    padding: 8px 24px;
+    margin-bottom: 10px; // добавим отступ внизу для мобильных устройств
+  }
+
+  &Green {
+    background-color: #13cb3b;
+    border: 2px solid #12b135;
+  }
+
+  &Red {
+    background: #d63c58;
+    border: 2px solid #cb1334;
+  }
+}
+
+// Медиазапросы для адаптивной верстки
+@media (min-width: 320px) {
+  .interfaceInner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interfaceLink {
+    margin-bottom: 20px;
+  }
+
+  .interfaceButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .interfaceGreen,
+  .interfaceRed {
+    font-size: 14px; // уменьшаем размер шрифта для маленьких экранов
+    padding: 6px 20px; // уменьшаем внутренние отступы
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 576px) {
+  .interfaceInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .interfaceLink {
+    margin-bottom: 0;
+  }
+
+  .interfaceButtons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .interfaceGreen,
+  .interfaceRed {
+    font-size: 20px;
+    padding: 8px 24px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .interfaceGreen,
+  .interfaceRed {
+    font-size: 22px;
+    padding: 8px 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .interfaceGreen,
+  .interfaceRed {
+    font-size: 24px;
+    padding: 8px 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .interfaceGreen {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .interfaceGreen {
+    margin-right: 50px;
+  }
+}

@@ -1,0 +1,15 @@
+.title-item {
+  font-size: 35px;
+  color: #fff;
+  font-weight: 500;
+  padding: 15px 12px;
+  border-radius: 20px;
+  background-color: #b8c7fb;
+  text-align: center;
+}
+
+@media (max-width: 425px) {
+  .title-item {
+    font-size: 25px;
+  }
+}

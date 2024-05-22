@@ -1,0 +1,17 @@
+.shops {
+  background: #ffffff;
+  width: 845px; /* Ширина */
+  height: 842px; /* Высота */
+  margin: auto;
+  border-radius: 35px 35px;
+  margin-bottom: 100px;
+  margin-top: -93px;
+  padding: 205px 15px 50px 15px;
+}
+
+@media (max-width: 850px) {
+  .shops {
+    width: 100%;
+    padding-top: 165px;
+  }
+}

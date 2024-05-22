@@ -1,0 +1,69 @@
+.text_small span {
+  font-size: 24px;
+}
+
+.text_big p,
+.coins_section {
+  font-size: 65px;
+  font-weight: 500;
+  margin-top: 40px;
+}
+.coins_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.violet_rectangle {
+  background: linear-gradient(to bottom, #e777f1, #bc13cb, #e777f1);
+  // padding: 20px;
+  border-radius: 35px;
+  text-align: center; /* Выравнивание текста по центру */
+  width: 845px; /* Ширина */
+  height: 420px; /* Высота */
+  z-index: 2;
+  position: relative;
+  margin: auto;
+  margin-top: 320px;
+}
+
+.text_all {
+  padding-top: 90px;
+  color: white;
+}
+
+.white_rectangle {
+  background: #b2aeae;
+  width: 845px; /* Ширина */
+  height: 842px; /* Высота */
+  margin: auto;
+  border-radius: 35px 35px;
+}
+
+@media (max-width: 650px) {
+  .violet_rectangle {
+    margin-top: 100px;
+  }
+  .text_big p,
+  .coins_section {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .violet_rectangle {
+    width: 100%;
+    height: 300px;
+  }
+}
+@media (min-width: 651px) and (max-width: 850px) {
+  .violet_rectangle {
+    width: 100%;
+    height: 380px;
+  }
+
+  .text_big p,
+  .coins_section {
+    font-size: 52px;
+    margin-top: 40px;
+  }
+}

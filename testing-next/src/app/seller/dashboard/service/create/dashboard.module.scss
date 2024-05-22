@@ -1,0 +1,94 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.dashboardContainer {
+  height: 100vh;
+  background-color: $white;
+  margin-left: 13.5rem;
+  @media only screen and (400px < width < 840px) {
+    margin: 0;
+    height: 105vh;
+  }
+}
+
+.workSpace {
+  height: 95vh;
+  background-color: $white;
+  padding-bottom: 2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  @media only screen and (max-width: 840px) {
+    padding: 3rem 3rem 4rem 3rem;
+  }
+}
+
+.createForm {
+  // flex-grow: 1;
+  height: fit-content;
+  border-radius: 3rem;
+  background-color: $pastel-indigo;
+  display: flex;
+  flex-direction: row;
+  flex-flow: nowrap;
+  padding: 2rem;
+  justify-content: space-between;
+  @media only screen and (max-width: 840px) {
+    flex-direction: column;
+    flex-flow: none;
+  }
+}
+
+.heading {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  font-family: $first-montserrat;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $dark-grey;
+}
+
+.textRow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.createButton {
+  @include sellerButton;
+  margin: 0rem;
+  max-height: 10vh;
+}
+
+.textInputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.input {
+  @include input-box;
+  margin-bottom: 2rem;
+  // color: $font-soft-grey;
+}
+
+.photoBox {
+  @include input-box;
+  margin-left: 2rem;
+  height: 15rem;
+  width: 15rem;
+  color: $font-soft-grey;
+  padding: 2rem;
+  padding-top: 6rem;
+  text-align: center;
+  vertical-align: middle;
+  @media only screen and (max-width: 840px) {
+    order: -1;
+    align-self: center;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+}

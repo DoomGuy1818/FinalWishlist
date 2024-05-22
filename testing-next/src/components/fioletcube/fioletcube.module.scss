@@ -1,0 +1,64 @@
+.gift_box {
+  background-color: #E8EAFF; 
+  display: flex; 
+  align-items: flex-start; 
+  padding: 3vw; /* Применяем vw для padding */
+  border-radius: 10vw; /* Применяем vw для border-radius */
+  height: 32vw;
+  margin: 5.5vw;
+  @media (max-width: 425px) {
+     height: 50vw;
+  }
+}
+.content {
+  padding: 3vw 5vw 5vw 5vw;
+}
+
+.image_container{
+  @media (max-width: 425px) {
+     display: none;
+  }
+}
+
+.title {
+  color: #000000;
+  font-size: 2vw;
+  margin-bottom: 1.5vw; /* Применяем vw для margin-bottom */
+  max-width: 33vw;
+  @media (max-width: 425px) {
+    font-size: 5vw; 
+    max-width: 60vw;
+  }
+}
+
+.description {
+  margin-top: 3vw;
+  color: #000000;
+  font-size: 1.2vw;
+  line-height: 1.5;
+  max-width: 37vw; 
+  @media (max-width: 425px) {
+    font-size: 2.5vw; 
+    max-width: 60vw;
+  }
+}
+
+.createButton {
+  margin-top: 4vw;
+  font-size: 1vw; 
+  padding: 1.3vw 1.3vw; 
+  border-radius: 15vw; 
+  background-color: #FBBC5E; 
+  color: #000000; 
+  border: none; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+  @media (max-width: 425px) {
+    font-size: 2.6vw; 
+    padding: 2.5vw 2.5vw;
+  }
+}
+
+.createButton:hover {
+  background-color: #fad295; 
+}

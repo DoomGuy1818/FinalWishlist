@@ -1,0 +1,184 @@
+/*
+@import 'variables';
+
+@mixin h1-title {
+  color: $black;
+  font-family: $first-montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@mixin back-button{
+  color: $font-deepGray;
+  font-family: $first-montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@mixin span-text{
+  color : $black;
+  font-family: $first-montserrat;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+@mixin placeholder-text{
+  color: $font-softGray;
+  font-family: $first-montserrat;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+}
+
+@mixin input-box{
+  border: $black;
+  border-radius: 20px;
+  box-shadow: $shadow;
+
+}
+
+@mixin create-button{
+  background-color: #BC13CB;
+  border: #BC13CB;
+  border-radius: 20px;
+}
+
+@mixin button-text {
+  color: $white;
+  font-family: $first-montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+@mixin wishlist-h2 {
+  color: $black;
+  font-family: $first-montserrat;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin register-card {
+  height: 789px;
+  width: 626px;
+  background: $white;
+}
+
+@mixin register-button {
+  height: 62px;
+  width: 490px;
+  background-color: #BC13CB;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-family: $first-montserrat;
+  margin-top: 86px;
+  margin-left: 62px;
+  font-size: 20px;
+}
+*/
+@import 'variables';
+
+@mixin h1-title {
+  color: $black;
+  font-family: $first-montserrat;
+  font-size: 2.5vw; 
+  font-style: normal;
+  font-weight: bold;
+  
+}
+
+@mixin back-button {
+  color: $font-deepGray;
+  font-family: $first-montserrat;
+  font-size: 1.25vw; // 24px -> 1.25vw
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@mixin span-text {
+  color: $black;
+  font-family: $first-montserrat;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 0.9375vw; 
+  @media (max-width: 800px){
+    font-size: 2vw;
+  }
+  @media (max-width: 425px){
+    font-size: 3vw;
+  }
+
+}
+
+@mixin placeholder-text {
+  color: $font-softGray;
+  font-family: $first-montserrat;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 1.25vw; 
+}
+
+@mixin input-box {
+  border: 0.052vw solid $black; 
+  border-radius: 1.04vw; 
+  background-color: $background-white;
+  padding-left: 0.625vw; 
+  font-size: 1vw;
+  @media (max-width: 800px){
+    font-size: 1.2vw;
+  }
+  @media (max-width: 425px){
+    font-size: 2vw;
+  }
+}
+
+@mixin create-button {
+  background-color: #BC13CB;
+  border: #BC13CB;
+  border-radius: 1.04vw; 
+}
+
+@mixin button-text {
+  color: $white;
+  font-family: $first-montserrat;
+  font-size: 1.25vw; 
+  font-style: normal;
+  font-weight: normal;
+  @media (max-width: 425px){
+    font-size: 2.2vw;
+  }
+}
+
+@mixin wishlist-h2 {
+  color: $black;
+  font-family: $first-montserrat;
+  font-size: 2.6vw; 
+  font-style: normal;
+  font-weight: 600;
+}
+
+@mixin register-card {
+  height: 41vw; 
+  width: 32.6vw; 
+  background: $white;
+}
+
+@mixin register-button {
+  height: 3.23vw; 
+  width: 25.52vw; 
+  background-color: #BC13CB;
+  border: none;
+  border-radius: 1.04vw; 
+  color: white;
+  font-family: $first-montserrat;
+  margin-top: 4.47vw; 
+  margin-left: 3.23vw; 
+  font-size: 1.04vw; 
+}

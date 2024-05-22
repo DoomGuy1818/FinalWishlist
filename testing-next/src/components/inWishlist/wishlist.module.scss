@@ -1,0 +1,112 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.container {
+    display: flex;
+    background-color: $background-white;
+    height: 100vh;
+}
+  
+.sector {
+    display: flex;
+    width: 100%;
+}
+  
+.sideNavbar {
+    width: 20%;
+    background-color: $background-white;
+    @media (max-width: 800px) {
+        width: 27%;
+    }
+    @media (max-width: 425px){
+        width: 40%; 
+    }
+}
+  
+.mainContent {
+    width: 80%;
+    padding: 1vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vw;
+    @media (max-width: 800px) {
+        margin-bottom: 4vw; 
+    }
+}
+
+.title {
+    font-size: 1.5vw;
+    @media (max-width: 800px) {
+        font-size: 3vw;
+    }
+    @media (max-width: 425px) {
+        font-size: 4vw;
+    }
+    
+}
+
+.addButton {
+    background-color: #A020F0;
+    color: white;
+    border: none;
+    padding: 0.5vw 1vw;
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    @media (max-width: 800px) {
+        padding: 1vw 2vw;
+        font-size: 1.5vw;
+    }
+    @media (max-width: 425px) {
+        padding: 1.5vw 3vw;
+        font-size: 2vw;
+    }
+}
+
+.shareButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.shareTxt{
+    font-size: 1.6vw;
+    @media (max-width: 800px) {
+        font-size: 2.5vw; 
+    }
+    @media (max-width: 425px) {
+        font-size: 3vw; 
+    }
+}
+
+.shareIcon {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin-right: 0.5vw;
+    @media (max-width: 800px) {
+        width: 2.5vw;
+        height: 2.5vw; 
+    }
+    @media (max-width: 425px) {
+        width: 3vw;
+        height: 3vw; 
+    }
+}
+
+.giftList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    flex-wrap: wrap;
+    gap: 1vw;
+    @media (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    @media (max-width: 425px) {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}

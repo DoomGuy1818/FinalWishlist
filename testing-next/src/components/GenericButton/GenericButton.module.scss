@@ -1,0 +1,44 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.sellerButton {
+  align-items: center;
+  background-color: $accent-violet;
+  // margin-left: 7.2rem;
+  border: 0;
+  border-radius: 45px;
+  box-sizing: border-box;
+  color: $white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $first-montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 30px;
+  max-width: 80vw;
+  min-height: 5vh;
+  min-width: 1vw;
+  overflow: hidden;
+  padding: 1em 2em;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+}
+
+.sellerButton:hover,
+.sellerButton:focus { 
+  background-color: $button-focus;
+  color: $white;
+}
+
+.sellerButton:active {
+  background: $accent-violet;
+  color: rgb(255, 255, 255, .7);
+}
+
+.sellerButton:disabled { 
+  cursor: not-allowed;
+  background: $button-inactive;
+  color: rgba(255, 255, 255, .3);
+}

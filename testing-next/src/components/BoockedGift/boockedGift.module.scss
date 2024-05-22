@@ -1,0 +1,47 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.container {
+    display: flex;
+    background-color: $background-white;
+    height: 100vh;
+  }
+  
+  .sector {
+    display: flex;
+    width: 100%;
+  }
+  
+  .sideNavbar {
+    width: 20%;
+    background-color: $background-white;
+    @media (max-width: 800px) {
+      width: 27%;
+  }
+  @media (max-width: 425px){
+      width: 40%; 
+  }
+  }
+  
+  .mainContent {
+    width: 80%;
+    padding: 1vw;
+  }
+  
+  .title {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    @media (max-width: 800px) {
+      font-size: 3vw;
+  }
+  @media (max-width: 425px) {
+      font-size: 4vw;
+  }
+  }
+  
+  .giftList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+  }
+  

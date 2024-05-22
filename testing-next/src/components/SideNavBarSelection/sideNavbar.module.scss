@@ -1,0 +1,36 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.list{
+  position: relative;
+  margin-top: 10rem;
+  margin-left: 100px;
+  list-style-type: none;
+
+  a{
+    text-decoration: none;
+    @include back-button;
+  }
+}
+
+.friend{
+  position: relative;
+  margin-top: 56px;
+}
+
+.gifts{
+  position: relative;
+  margin-top: 56px;
+}
+.settings{
+  position: relative;
+  margin-top: 56px;
+}
+
+.page{
+  a{
+    color: $accent-blue
+  }
+}
+
+

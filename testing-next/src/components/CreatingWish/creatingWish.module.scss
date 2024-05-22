@@ -1,0 +1,204 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.container {
+  background-color: $background-white;
+  margin: auto;
+  display: block;
+  justify-content: space-around;
+  padding-bottom: 4vw;
+}
+
+.blocklink {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.6vw;  
+  @media (max-width: 425px){
+    margin-bottom: 5.6vw;
+  }
+}
+
+.link {
+  position: relative;
+  top: 1vw; 
+  height: 2vw; 
+  width: 54.7vw; 
+  @include input-box;
+  @media (max-width: 800px){
+    height: 2.5vw;
+  }
+  @media (max-width: 425px){
+    height: 3vw;
+  }
+}
+
+.name {
+  margin-top: 1.6vw; 
+  height: 2vw; 
+  width: 31.25vw; 
+  @include input-box;
+  @media (max-width: 425px){
+    height: 3vw;
+  }
+}
+
+.comment {
+  height: 7.76vw; 
+  width: 36.45vw; 
+  @include input-box;
+}
+
+.addGift {
+  position: relative;
+  margin-top: 3.2vw; 
+  margin-right: 2.6vw; 
+
+  a {
+    @include back-button;
+    position: relative;
+  }
+}
+
+.addGiftText {
+  @include h1-title;
+  position: relative;
+  left: 2.6vw; 
+  top: 1vw; 
+  display: flex;
+}
+
+.sector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  @include h1-title;
+  margin-bottom: 2.45vw; 
+}
+
+.import {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5.2vw; 
+  span {
+    margin-bottom: 0.94vw; 
+  }
+}
+
+.img {
+  height: 17.18vw; 
+  width: 17.7vw; 
+  border: 0.1vw dashed gray;
+  border-radius: 1.04vw; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $background-white;
+  @media (max-width: 425px){
+    height: 25.18vw; 
+    width: 25.7vw;  
+  }
+}
+
+.fileLabel {
+  display: block;
+  cursor: pointer;
+  font-size: 0.83vw; 
+  line-height: 1.5;
+  @media (max-width: 800px){
+    font-size: 1.2vw;
+  }
+  @media (max-width: 425px){
+    font-size: 1.6vw;
+    
+  }
+}
+
+.fileLabel .highlightedText {
+  color: #00aaff;
+}
+
+.fileInput {
+  display: none;
+}
+
+.bigblock {
+  display: flex;
+  flex-wrap: wrap; 
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
+}
+
+.block1, .block2, .block3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vw;
+  margin-bottom: 3.08vw; 
+  span {
+    margin-bottom: 0.94vw; 
+    @media (max-width: 800px){
+      font-size: 2vw;
+    }
+    @media (max-width: 425px){
+      font-size: 3vw;
+    }
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.priceInput {
+  height: 2vw; 
+  width: 5.2vw; 
+  margin-right: 0.52vw; 
+  @include input-box;
+  @media (max-width: 425px){
+    height: 3vw; 
+    width: 10.2vw;
+  }
+}
+
+.currencySelect {
+  width: 6.2vw; 
+  height: 2vw; 
+  @include input-box;
+  background: url('data:image/svg+xml;utf8,<svg viewBox="-5 10 140 70" xmlns="http://www.w3.org/2000/svg"><polyline points="0,0 70,70 140,0" style="fill:none;stroke:black;stroke-width:10"></polyline></svg>') no-repeat right 1.5vw center; // custom arrow icon
+  background-size: 1.5vw; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  @media (max-width: 425px){
+    height: 3vw; 
+    width: 10.2vw;
+  }
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 10.4vw; 
+  margin-top: 19.47vw; 
+}
+
+.createButton {
+  @include create-button;
+  @include button-text;
+  height: 5.2vw;  
+  width: 15.6vw; 
+  @media(max-height: 425px){
+    height: 6.2vw;  
+    width: 19.6vw;
+  }
+}
+
+.text {
+  @include span-text;
+}

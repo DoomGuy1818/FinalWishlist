@@ -1,0 +1,53 @@
+.conteiner{
+    padding-left: 5.5vw;
+    padding-right: 5.5vw;
+    background-color: #ffffff;
+}
+.gift_selections_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav_item1{
+    font-size: 1.7vw;
+    font-weight: 700;
+
+    @media (max-width: 800px) {
+        font-size: 2.3vw; 
+      }
+    
+    @media (max-width: 425px) {
+        font-size: 2.7vw; 
+    }
+
+
+}
+.nav_item2 {
+    font-size: 1.3vw;
+    font-weight: 500;
+    margin-right: 7px;
+    height: 15px; 
+    display: flex;
+    align-items: center; 
+
+    @media (max-width: 800px) {
+        font-size: 1.9vw; 
+      }
+    
+    @media (max-width: 425px) {
+        font-size: 2.4vw; 
+    }
+  }
+
+.seeAll{
+    display: flex;
+}
+
+.selection{
+    margin-bottom: 5vw;
+    
+}
+
+
+

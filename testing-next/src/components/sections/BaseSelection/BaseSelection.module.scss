@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  max-width: 1720px;
+  padding-left: 5.5vw;
+  padding-right: 5.5vw;
+  margin: auto;
+}
+
+.Title {
+  color: #504838;
+  font-size: 48px;
+  font-weight: 800;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.selection {
+  margin-top: 2vw;
+
+  .selectionInner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5vw;
+
+    @media (max-width: 800px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 425px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .selectionCard {
+    width: 100%;
+    background-color: #ffffff;
+
+    img {
+      border-radius: 35px;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

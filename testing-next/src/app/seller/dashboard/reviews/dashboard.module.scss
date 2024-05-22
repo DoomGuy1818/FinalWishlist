@@ -1,0 +1,47 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.dashboardContainer {
+  height: 100vh;
+  background-color: $white;
+  margin-left: 13.5rem;
+  @media only screen and (max-width: 840px) {
+    margin: 0;
+    height: 105vh;
+  }
+}
+
+.workSpace {
+  height: 95vh;
+  background-color: $white;
+  padding-bottom: 2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 840px) {
+    padding: 3rem 3rem 4rem 3rem;
+  }
+}
+
+.createForm {
+  // flex-grow: 1;
+  height: fit-content;
+  border-radius: 3rem;
+  background-color: $pastel-indigo;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.filterBox {
+  @include input-box;
+  margin-bottom: 2rem;
+}
+
+.reviewContainer {
+  @include input-box;
+  height: 60vh;
+  box-shadow: none;
+}

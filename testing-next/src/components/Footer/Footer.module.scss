@@ -1,0 +1,80 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+// .footerContainer {
+//     padding: 0 162px;
+// }
+
+.footerContainer {
+    background-color: $background-color;
+    display: flex;
+    padding: 20px 120px;
+}
+
+.subContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 195px;
+    align-items: stretch;
+}
+
+.logo {
+    display: flex;
+    align-items: left;
+    margin-bottom: 30px;
+}
+
+.logoTitle {
+    color: #FFFFFF;
+    padding-top: 11px;
+    padding-left: 10px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.footerNavigation {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 1.5fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 0px;
+}
+
+.listItem {
+    color: $absolute-white-color;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.privacyContainer {
+    display: flex;
+    align-items: stretch;
+    color: $absolute-white-color;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.6%;
+    font-weight: 500;
+}
+
+.privacyText1 {
+    margin-right: 38px;
+}
+
+.socialContainer {
+    height: 72px;
+    width: 238px;
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.btnIcon {
+    border-radius: 58px;
+    background-color: #141414;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

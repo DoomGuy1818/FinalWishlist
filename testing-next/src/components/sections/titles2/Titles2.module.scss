@@ -1,0 +1,97 @@
+.container {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 20px; 
+  padding-left: 5.5vw;
+  padding-right: 5.5vw;
+}
+
+.title {
+  color: #ffffff;
+  background: linear-gradient(to bottom, #e5aaaf 65%, #ffffff);
+  padding-bottom: 300px;
+
+  .titleArticle {
+    max-width: 1350px;
+    font-size: 6vw; 
+    font-weight: 800;
+    margin-bottom: 5vw; 
+  }
+
+  .titleText {
+    font-weight: 400;
+    font-size: 2vw; 
+    max-width: 1062px;
+    margin: 0; 
+    padding: 0 20px; 
+  }
+}
+
+@media (max-width: 320px) {
+  .titleArticle {
+    font-size: 24px; 
+    margin-bottom: 20px;
+  }
+
+  .titleText {
+    font-size: 12px; 
+    padding: 0 10px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .titleArticle {
+    font-size: 24px; 
+    margin-bottom: 20px; 
+  }
+
+  .titleText {
+    font-size: 12px; 
+    padding: 0 10px; 
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .titleArticle {
+    font-size: 32px; 
+    margin-bottom: 30px; 
+  }
+
+  .titleText {
+    font-size: 16px; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .titleArticle {
+    font-size: 48px;
+    margin-bottom: 40px; 
+  }
+
+  .titleText {
+    font-size: 20px; 
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .titleArticle {
+    font-size: 64px; 
+    margin-bottom: 60px;
+  }
+
+  .titleText {
+    font-size: 24px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  .titleArticle {
+    font-size: 96px; 
+    margin-bottom: 70px;
+  }
+
+  .titleText {
+    font-size: 32px; 
+  }
+}
