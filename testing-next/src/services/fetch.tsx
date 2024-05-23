@@ -6,6 +6,7 @@ import {json} from "node:stream/consumers";
 // import wishlist from "@/components/wishlist/wishlist";
 import {Photo} from "@/types/photo";
 import {Credentionals} from "@/types/credentionals";
+import { log } from 'console';
 
 
 const BASE = 'http://84.38.183.178:7070'
@@ -105,6 +106,33 @@ export async function fetchWishlists(): Promise<Wishlist[]> {
 
 }
 
+export async function fetchUser(): Promise<User[]> {
+    let authToken = localStorage.getItem("user");
+    if (authToken && authToken.startsWith('"') && authToken.endsWith('"')) {
+        authToken = authToken.slice(1, -1);
+    }
+
+    const userID = localStorage.getItem("userID");
+    if (!userID) {
+        throw new Error('User ID not found in local storage');
+    }
+
+    const res = await fetch(`${BASE}/users/${userID}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': authToken ? authToken : ''
+        }
+    });
+
+    if (!res.ok) {
+        throw new Error('Failed to fetch user');
+    }
+    return res.json();
+}
+
+
+
 export async function RegisterUser(newUser: User): Promise<User> {
     const res = await fetch(`${BASE}/register`, {
         method: "POST",
@@ -129,6 +157,7 @@ export async function RegisterUser(newUser: User): Promise<User> {
     localStorage.setItem("user", sessionId);
 
     return session; // Возвращаем разобранный JSON-объект
+    
 }
 
 export async function CreateGift(newGift: Gift): Promise<Gift> {
@@ -171,17 +200,14 @@ export async function CreateGift(newGift: Gift): Promise<Gift> {
     return gift;
 }
 
-export async function LoginUser(credentionals: Credentionals): Promise<User> {
-    const res = await fetch( `${BASE}/login`, {
+export async function LoginUser(credentials: { login: string, password: string }): Promise<User> {
+    const res = await fetch(`${BASE}/login`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
 
         },
-        body: JSON.stringify({
-            login: credentionals.login,
-            password: credentionals.password
-        })
+        body: JSON.stringify(credentials)
     });
 
     if (!res.ok) {
@@ -190,11 +216,13 @@ export async function LoginUser(credentionals: Credentionals): Promise<User> {
 
     const session = await res.json();
     const sessionId = session.id.replace(/"/g, ''); // Убедимся, что sessionId необходимо обработать правильным образом
+    console.log (sessionId)
     localStorage.setItem("user", sessionId);
+    localStorage.setItem("userID", session.userID); // предполагаем, что session содержит userID
 
-    // Возвращаем обработанный объект JSON, а не вызываем res.json() повторно
     return session;
 }
+
 
 export async function getPhoto(): Promise<Photo[]> {
     let category =  localStorage.getItem("category");

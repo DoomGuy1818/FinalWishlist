@@ -3,23 +3,27 @@
 
 .container {
   background-color: $background-white;
-  height: 100vh;
-  // width: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
 }
+
 .loginBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   border-radius: 2rem;
-  margin: auto;
-  @include register-card;
+  padding: 2rem;
+  box-shadow: $shadow;
+  background-color: $white;
   width: clamp(60vw, 80vw, 80vw);
   height: fit-content;
-  box-shadow: $shadow;
+  box-sizing: border-box;
+
   button {
     @include register-button;
     width: clamp(40vw, 60vw, 80vw);
@@ -32,11 +36,18 @@
     margin-top: 2vh;
     margin-bottom: 1vh;
     @include h1-title;
+    @media(max-width: 600px){
+    font-size: 30px;
+  }
+    @media(max-width: 420px){
+    font-size: 20px;
   }
 }
 
 .loginContent {
   padding: 2rem 1rem 3rem 1rem;
+
+  
 }
 
 .backButton {
@@ -48,6 +59,7 @@
 .loginInput {
   display: flex;
   flex-direction: column;
+
   span {
     margin-left: 2rem;
     margin-top: 1rem;
@@ -61,35 +73,18 @@
     margin-left: 2rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
-  }
-}
-
-.passwordInput {
-  display: flex;
-  flex-direction: column;
-
-  span {
-    margin-left: 2rem;
-    margin-top: 0.5rem;
-    @include span-text;
-  }
-
-  input {
-    width: clamp(40vw, 60vw, 80vw);
-    height: 3rem;
-    margin-left: 2rem;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    @include input-box;
   }
 }
 
 .support {
   display: flex;
   flex-direction: row;
-  @media only screen and (max-width: 650px) {
-	  flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
+
   justify-content: space-between;
   margin-top: 1.5rem;
 }
@@ -107,4 +102,5 @@
   margin-top: 1rem;
   margin-left: 2rem;
   margin-right: 2rem;
+}
 }

@@ -25,6 +25,15 @@ const BurgerMenu = () => {
   const logoWidth = windowWidth * 0.16; 
   const logoHeight = logoWidth * 0.4; 
 
+  const checkUserSession = () => {
+    if (typeof localStorage === 'undefined') {
+      return false;
+    }
+    const userSession = localStorage.getItem('userSession');
+    console.log(userSession)
+    return !!userSession;
+  };
+
   return (
     <div className={styles.all}>
       <div className={styles.biggift}>
@@ -34,7 +43,7 @@ const BurgerMenu = () => {
       <section className={styles.topNav}>
         <div className={styles.logo}>
           <a href ="/">
-        <Image src="Images/logo.svg" width={logoWidth} height={logoHeight} alt="Not found" />
+        <Image src="/images/logo.svg" width={logoWidth} height={logoHeight} alt="Not found" />
         </a>
         </div>
         <input id="menu-toggle" type="checkbox" className={styles.menuToggle} />
@@ -42,10 +51,12 @@ const BurgerMenu = () => {
           <div className={styles.menuButton}></div>
         </label>
         <ul className={styles.menu}>
-          <li><a href = "/main-selection">Подборки</a></li>
-          <li><a href = "/in-wishlist">Мои вишлист</a></li>
-          <li><a href = "/boocked-gift">Подарки друзьям</a></li>
-          <li><a href = "/profile">Мой профиль</a></li>
+          <ul className={styles.menu}>
+          {/* <li><a href = {checkUserSession()? "/profile" : "/profile"  }>Мои квесты</a></li> */}
+          <li><a href = {checkUserSession()? "/seller/dashboard/gift" : "/seller/dashboard/gift"  }>Продавцам</a></li>
+          <li><a href = {checkUserSession()? "/main-selection" : "/main-selection"  }>Подборки</a></li>
+          <li><a href = {checkUserSession()? "/profile" : "/login"  }>Мой профиль</a></li>
+        </ul>
         </ul>
       </section>
       <ul className={styles.header__list__main}>

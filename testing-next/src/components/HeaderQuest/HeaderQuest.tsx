@@ -31,7 +31,7 @@ export default function Header() {
       <section className={styles.topNav}>
         <div className={styles.logo}>
         <a href ="/">
-        <Image src="Images/logo.svg" width={logoWidth} height={logoHeight} alt="Not found" />
+        <Image src="/images/logo.svg" width={logoWidth} height={logoHeight} alt="Not found" />
         </a>
         </div>
         <input id="menu-toggle" type="checkbox" className={styles.menuToggle} />

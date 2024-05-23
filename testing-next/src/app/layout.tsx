@@ -30,7 +30,7 @@ export default function RootLayout({
 // seller
   return (
 	<html lang="ru">
-		<body className="wrapper">
+		<body className={montserrat.className}>
 			<ReactQueryProvider>
 				<main>{children}</main>
 			</ReactQueryProvider>
