@@ -10,6 +10,7 @@ import { log } from 'console';
 
 
 const BASE = 'http://84.38.183.178:7070'
+const SESSION = 'session_cp4ahofnnsjf4mhn7ufg'
 
 export async function fetchWishes(): Promise<Gift[]> {
     let wishlistID = localStorage.getItem("wishlistID");
@@ -26,9 +27,10 @@ export async function fetchWishes(): Promise<Gift[]> {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': authToken ? authToken : ''
+                'Authorization': `${SESSION}`
             }
         });
+    
 
         if (!res.ok) {
             throw new Error('Failed to fetch wish');
@@ -65,7 +67,7 @@ export async function CreateWish(wish: Wish): Promise<Wish> {
         method: 'GET',
         headers: {
             'Content-Type':  'application/json',
-            'Authorization': 'session_cnvdk9k69lbm5c1vej1g'
+            'Authorization': `${SESSION}`
         },
 
         body: JSON.stringify({
@@ -92,7 +94,7 @@ export async function fetchWishlists(): Promise<Wishlist[]> {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': authToken? authToken : ''
+            'Authorization': `${SESSION}`
         }
 
         });
@@ -121,7 +123,7 @@ export async function fetchUser(): Promise<User[]> {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': authToken ? authToken : ''
+            'Authorization': `${SESSION}`
         }
     });
 
@@ -171,11 +173,11 @@ export async function CreateGift(newGift: Gift): Promise<Gift> {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'session_cp4ahofnnsjf4mhn7ufg'
+                'Authorization': `${SESSION}`
             },
             body: JSON.stringify({
                 name: newGift.name,
-                price: Number(price),
+                price: price,
                 photo: newGift.photo,
                 description: newGift.description,
                 link: newGift.link,
@@ -184,7 +186,7 @@ export async function CreateGift(newGift: Gift): Promise<Gift> {
 
     console.log('у меня памяти 16 мегабайт' + JSON.stringify({
         name: newGift.name,
-        price: newGift.price,
+        price: price,
         photo: newGift.photo,
         description: newGift.description,
         link: newGift.link}))
@@ -242,7 +244,7 @@ export async function getPhoto(): Promise<Photo[]> {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'session_cp4ahofnnsjf4mhn7ufg'
+            'Authorization': `${SESSION}`
         },
     })
     if (!res.ok) {
