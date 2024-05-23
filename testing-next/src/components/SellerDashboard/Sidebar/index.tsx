@@ -5,9 +5,11 @@ import Logo from "@/components/SellerDashboard/Logo"
 export default function Sidebar() {
   return (
     <div className={styles.sidebarContainer}>
-      <div className={styles.logo}>
+      <a href ="/">
+	  <div className={styles.logo}>
 	<Logo />
       </div>
+	  </a>
       <div className={styles.parent}>
 	<a href="/seller/dashboard/gift" className={styles.child}>
 	  <Image src="/gift.svg" alt="" width={40} height={40} />
