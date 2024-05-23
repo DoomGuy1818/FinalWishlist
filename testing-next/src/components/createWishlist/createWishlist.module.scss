@@ -1,8 +1,7 @@
 @import "../styles/variables";
 @import "../styles/mixins";
 
-.container{
-  // margin-top: 150px;
+.container {
   height: 100vh;
   background-color: #E8EAFF;
 }
@@ -10,64 +9,95 @@
 .flexbox {
   display: flex;
   flex-direction: row;
+  
+  
 }
 
-.titleBox {
+.sidebarDiv {
+  width: 22%; 
+  margin-right: 1vw;
+  // margin-top: -0.5vw;
+ 
+}
+
+.createWishlist {
+  margin-top: 7vw;
+  margin-left: 20vw;
+  margin-right: 5.5vw;
+  margin-bottom: 8vw;
+  width: 60%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+
+  a {
+    display: block;
+    margin-bottom: 20px;
+    color: #5a67d8;
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1 {
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #333;
+  }
+}
+
+.titleBox,
+.commentBox {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 
   span {
-    margin-left: 55px;
-    @include span-text();
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
   }
 
   input {
-    margin-left: 55px;
-    margin-top: 20px;
-    width: 620px;
-    height: 40px;
-    @include input-box
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
 }
 
 .commentBox {
-  display: flex;
-  flex-direction: column;
-  margin-top: 78px;
-  span {
-    margin-left: 55px;
-    @include span-text();
-  }
   input {
-    margin-left: 55px;
-    margin-top: 20px;
-    width: 620px;
-    height: 214px;
-    @include input-box
+    height: 100px;
   }
 }
 
-.createWishlist {
-  margin-left: 150px;
-  margin-top: 76px;
-  width: 730px;
-  height: 774px;
-  background-color: white;
-  border-radius: 20px;
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 
-  a {
-    margin-top: 72px;
-    margin-left: 84px;
-    @include back-button
-  }
+  .createButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #5a67d8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
-  h1 {
-    margin-left: 52px;
-    @include h1-title;
+    &:hover {
+      background-color: #4c51bf;
+    }
   }
 }
 
 .content {
-  margin-top: 70px;
+  width: 100%;
 }
-

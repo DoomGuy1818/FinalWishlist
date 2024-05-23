@@ -33,16 +33,16 @@ export default function CreateWishlistForm() {
     return(
         <div className={styles.container}>
             <div className={styles.flexbox}>
-                <div className={styles.sidebarDiv}>
+                {/* <div className={styles.sidebarDiv}>
                     <SideNavBarAdmin/>
-                </div>
+                </div> */}
                 <div className={styles.createWishlist}>
                     <div className={styles.content}>
                         <a href="#">Назад</a>
                         <h1>Создать Вишлист</h1>
                         <div className={styles.titleBox}>
                             <span>Название</span>
-                            <input type='text' name="Name" value={formData.name} onChange={handleInputChange}/>
+                            <input type='text' name='name' value={formData.name} onChange={handleInputChange}/>
                         </div>
                         <div className={styles.commentBox}>
                             <span>Комментарий</span>

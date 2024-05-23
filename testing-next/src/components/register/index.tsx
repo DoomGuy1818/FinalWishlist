@@ -55,9 +55,11 @@ export default function RegistrationCard({ back, login }) {
                             <input type="password" />
                         </div>
                     </div>
-                    <button type="button" className={buttonStyles.sellerButton} onClick={handleRegisterClick}>
-                        Зарегистрироваться
-                    </button>
+                    <a href="/profile">
+                        <button type="button" className={buttonStyles.sellerButton} onClick={handleRegisterClick}>
+                            Зарегистрироваться
+                        </button>
+                    </a>
                     <div className={styles.support}>
                         <a href={login ? login : "/nope!"} className={styles.login}>Уже зарегистрированы?</a>
                     </div>

@@ -31,7 +31,7 @@ export default function Main() {
                     <div className={styles.nav_item1}>Все подарки</div>
                     <div className={styles.seeAll}>
                      <div className={styles.nav_item2}><a href = "/main-selection">Смотреть все</a></div>
-                     <Image src="Images/arrow.svg" width={25} height={15} alt="Icon" />
+                     <Image src="/images/arrow.svg" width={25} height={15} alt="Icon" />
                     </div>
                 </div>
                 <div>
